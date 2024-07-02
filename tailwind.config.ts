@@ -19,6 +19,21 @@ const config = {
       },
     },
     extend: {
+      colors: {
+        "ph-orange": {
+          "50": "#fff9ed",
+          "100": "#fff1d4",
+          "200": "#ffe0a8",
+          "300": "#ffc972",
+          "400": "#fea739",
+          "500": "#fd8608",
+          "600": "#ee6f08",
+          "700": "#c55409",
+          "800": "#9c4210",
+          "900": "#7e3810",
+          "950": "#441906",
+        },
+      },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
