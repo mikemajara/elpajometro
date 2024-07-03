@@ -1,4 +1,4 @@
-import { Twitter } from "@/components/icons";
+import TotalPajeros from "@/components/charts/total-pajeros";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -25,11 +25,32 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col gap-10 items-center p-24 bg-neutral-900 text-white">
       <Image src="/pajo-metro.svg" width="1200" height="800" alt="pajometro" />
+
+      <div className="w-full grid grid-cols-6 grid-rows-6 gap-5">
+        <div className="col-span-6 sm:col-span-3 sm:row-span-3">
+          <TotalPajeros height="180px" />
+        </div>
+        <div className="col-span-6 sm:col-span-3 sm:row-span-2 ">
+          <TotalPajeros height="70px" />
+        </div>
+        <div className="col-span-6 sm:col-span-3 sm:row-span-3 ">
+          <TotalPajeros height="180px" />
+        </div>
+        <div className="col-span-6 sm:col-span-3 sm:row-span-2 ">
+          <TotalPajeros height="70px" />
+        </div>
+      </div>
+
+      <div className="h-[200px] sm:h-[300px] w-full border border-primary p-4"></div>
       <div id="main content" className="grid gap-4 max-w-96">
         <span>
           {/* <Twitter className="w-4 h-4" /> */}
           <i>
-            <a href="https://x.com/MiguelCamba/status/1807798237828432297">
+            <a
+              href="https://x.com/MiguelCamba/status/1807798237828432297"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {'"'}pronto vamos a poder tener un ranking por DNI de los
               campeones de España.{'"'}
             </a>
@@ -37,7 +58,11 @@ export default function Home() {
         </span>
         <span>
           {/* <Newspaper className="w-4 h-4" /> */}
-          <a href="https://www.20minutos.es/noticia/5526647/0/app-gobierno-para-verificar-edad-webs-porno-emitira-un-pack-credenciales-para-30-dias-estara-lista-finales-verano/">
+          <a
+            href="https://www.20minutos.es/noticia/5526647/0/app-gobierno-para-verificar-edad-webs-porno-emitira-un-pack-credenciales-para-30-dias-estara-lista-finales-verano/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             La app del Gobierno para verificar la edad en webs porno emitirá un
             pack de credenciales para 30 días y estará lista a finales de verano
           </a>
@@ -54,7 +79,7 @@ export default function Home() {
           {/* <Label htmlFor="email">Email</Label> */}
           <Input name="email" type="email" className="" placeholder="Email" />
         </div>
-        <Button className="bg-ph-orange-300 text-black ">Enviar</Button>
+        <Button className=" ">Enviar</Button>
       </form>
     </main>
   );
