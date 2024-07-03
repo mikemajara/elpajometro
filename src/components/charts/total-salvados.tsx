@@ -11,16 +11,19 @@ import {
 } from "recharts";
 import { Card, CardContent, CardHeader } from "../ui/card";
 import { format } from "date-fns";
-import { dataPajeros as data } from "@/data";
+import { dataSalvados as data } from "@/data";
 
-const TotalPajeros = ({ height }: { height: string }) => {
-  const variacion = Math.round(
-    (data[data.length - 1].total / data[data.length - 2].total - 1) * 100
+const TotalSalvados = ({ height }: { height: string }) => {
+  let variacion = Math.round(
+    (data[data.length - 1].total / data[data.length - 2].total) * 100
   );
+  if (isNaN(variacion)) {
+    variacion = 0;
+  }
   return (
     <Card className="w-full h-full bg-neutral-800 text-primary ">
       <CardHeader>
-        <p className="text-sm">Pajeros reconocidos</p>
+        <p className="text-sm">Jóvenes salvados</p>
         <p className="font-extrabold text-2xl">
           {new Intl.NumberFormat(undefined).format(data[data.length - 1].total)}
         </p>
@@ -53,12 +56,20 @@ const TotalPajeros = ({ height }: { height: string }) => {
                 background: "#fafafa",
               }}
             />
+            {/* <XAxis
+              dataKey="date"
+              tickFormatter={(timeStr) => format(timeStr, "MMM yy")}
+              type="number"
+              name="Date"
+              domain={["auto", "auto"]}
+            /> */}
+            {/* <YAxis dataKey="total" name="Total" /> */}
 
             <Line
               className="stroke-ph-orange-500"
               type="monotone"
-              dot={false}
               dataKey="total"
+              dot={false}
               stroke=""
               strokeWidth={2}
             />
@@ -69,4 +80,4 @@ const TotalPajeros = ({ height }: { height: string }) => {
   );
 };
 
-export default TotalPajeros;
+export default TotalSalvados;

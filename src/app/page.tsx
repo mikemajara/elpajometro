@@ -1,20 +1,9 @@
+import TotalPajaportes from "@/components/charts/total-pajaportes";
 import TotalPajeros from "@/components/charts/total-pajeros";
+import TotalPresupuesto from "@/components/charts/total-presupuesto";
+import TotalSalvados from "@/components/charts/total-salvados";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Tooltip,
-  TooltipTrigger,
-  TooltipContent,
-  TooltipProvider,
-} from "@/components/ui/tooltip";
-import { ArrowRight, ExternalLink, Newspaper } from "lucide-react";
 import Image from "next/image";
 import { fileURLToPath } from "url";
 
@@ -25,23 +14,22 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col gap-10 items-center p-24 bg-neutral-900 text-white">
       <Image src="/pajo-metro.svg" width="1200" height="800" alt="pajometro" />
-
+      <p className="text-2xl font-light">Consulta las últimas estadísticas</p>
       <div className="w-full grid grid-cols-6 grid-rows-6 gap-5">
         <div className="col-span-6 sm:col-span-3 sm:row-span-3">
           <TotalPajeros height="180px" />
         </div>
         <div className="col-span-6 sm:col-span-3 sm:row-span-2 ">
-          <TotalPajeros height="70px" />
+          <TotalPajaportes height="70px" />
         </div>
         <div className="col-span-6 sm:col-span-3 sm:row-span-3 ">
-          <TotalPajeros height="180px" />
+          <TotalPresupuesto height="180px" />
         </div>
         <div className="col-span-6 sm:col-span-3 sm:row-span-2 ">
-          <TotalPajeros height="70px" />
+          <TotalSalvados height="70px" />
         </div>
       </div>
 
-      <div className="h-[200px] sm:h-[300px] w-full border border-primary p-4"></div>
       <div id="main content" className="grid gap-4 max-w-96">
         <span>
           {/* <Twitter className="w-4 h-4" /> */}

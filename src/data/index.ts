@@ -1,4 +1,4 @@
-export const data = [
+export const dataPajeros = [
   {
     date: new Date("01/07/2023"),
     total: 1000,
@@ -50,5 +50,71 @@ export const data = [
   {
     date: new Date("01/07/2024"),
     total: 20646,
+  },
+];
+
+export const dataPajaportes = [
+  {
+    date: new Date("01/07/2023"),
+    total: 0,
+  },
+  {
+    date: new Date("01/08/2023"),
+    total: 0,
+  },
+  {
+    date: new Date("01/09/2023"),
+    total: 0,
+  },
+  {
+    date: new Date("01/10/2023"),
+    total: 0,
+  },
+  {
+    date: new Date("01/11/2023"),
+    total: 0,
+  },
+  {
+    date: new Date("01/12/2023"),
+    total: 0,
+  },
+  {
+    date: new Date("01/01/2024"),
+    total: 0,
+  },
+  {
+    date: new Date("01/02/2024"),
+    total: 0,
+  },
+  {
+    date: new Date("01/03/2024"),
+    total: 0,
+  },
+  {
+    date: new Date("01/04/2024"),
+    total: 0,
+  },
+  {
+    date: new Date("01/05/2024"),
+    total: 0,
+  },
+  {
+    date: new Date("01/06/2024"),
+    total: 10,
+  },
+  {
+    date: new Date("01/07/2024"),
+    total: 1201646,
+  },
+];
+
+export const dataSalvados = [
+  {
+    date: new Date("01/07/2023"),
+    total: 0,
+  },
+  {
+    date: new Date("01/08/2023"),
+    total: 0,
   },
 ];
